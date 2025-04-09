@@ -1,0 +1,7 @@
+name: 1-node-lab
+topology:
+  nodes:
+    router1:
+      kind: linux
+      image: vrnetlab/vr-routeros:7.18.2
+      startup-config: ./configs/generated/router1.conf
