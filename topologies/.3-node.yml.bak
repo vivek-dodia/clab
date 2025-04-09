@@ -1,0 +1,16 @@
+name: 3-node-lab
+topology:
+  nodes:
+    router1:
+      kind: linux
+      image: vrnetlab/vr-routeros:7.18.2
+    router2:
+      kind: linux
+      image: vrnetlab/vr-routeros:7.18.2
+    router3:
+      kind: linux
+      image: vrnetlab/vr-routeros:7.18.2
+  links:
+    - endpoints: ["router1:eth2", "router2:eth2"]
+    - endpoints: ["router1:eth3", "router3:eth2"]
+    - endpoints: ["router2:eth3", "router3:eth3"]
