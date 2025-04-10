@@ -3,19 +3,19 @@ topology:
   nodes:
     router1:
       kind: linux
-      image: vrnetlab/vr-routeros:7.18.2
+      image: blaaackbear/vr-routeros:7.18.2
       startup-config: ./configs/generated/router1.conf
     router2:
       kind: linux
-      image: vrnetlab/vr-routeros:7.18.2
+      image: blaaackbear/vr-routeros:7.18.2
       startup-config: ./configs/generated/router2.conf
     router3:
       kind: linux
-      image: vrnetlab/vr-routeros:7.18.2
+      image: blaaackbear/vr-routeros:7.18.2
       startup-config: ./configs/generated/router3.conf
     router4:
       kind: linux
-      image: vrnetlab/vr-routeros:7.18.2
+      image: blaaackbear/vr-routeros:7.18.2
       startup-config: ./configs/generated/router4.conf
   links:
     - endpoints: ["router1:eth2", "router2:eth2"]
