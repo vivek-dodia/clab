@@ -1,0 +1,5 @@
+# Default values for network topologies
+topologyName: 2-node-test
+networkOsImage: blaaackbear/vr-routeros:7.18.2
+nodeKind: linux
+nodeCount: 2

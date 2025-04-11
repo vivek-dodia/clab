@@ -1,0 +1,19 @@
+apiVersion: clabernetes.containerlab.dev/v1alpha1
+kind: Topology
+metadata:
+  name: test-2node
+  namespace: c9s
+spec:
+  definition:
+    containerlab: |
+      name: 2-node-lab
+      topology:
+        nodes:
+          router1:
+            kind: linux
+            image: blaaackbear/vr-routeros:7.18.2
+          router2:
+            kind: linux
+            image: blaaackbear/vr-routeros:7.18.2
+        links:
+          - endpoints: ["router1:eth2", "router2:eth2"]
